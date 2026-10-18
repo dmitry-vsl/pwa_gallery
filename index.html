@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <title>Gallery</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header id="bar">
+    <span id="title">Gallery</span>
+    <span id="status"></span>
+    <button id="pick" type="button">Pick folder</button>
+  </header>
+
+  <main id="grid"></main>
+
+  <section id="empty">
+    <p>Pick a folder with photos and videos.<br>Files are read on this device only, nothing is uploaded.</p>
+    <button id="reopen" type="button" hidden></button>
+  </section>
+
+  <input id="fallback" type="file" multiple webkitdirectory accept="image/*,video/*" hidden>
+
+  <div id="viewer" hidden>
+    <div id="stage"></div>
+    <div id="caption"></div>
+    <button id="close" type="button" aria-label="Close">✕</button>
+  </div>
+</body>
+</html>
